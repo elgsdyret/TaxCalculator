@@ -1,0 +1,11 @@
+Having a bit of fun with code challenge posted on Ayende's blog
+
+I kinda like the C# solution, besides:
+
+- writing both lower and upper limit when defining an interval - makes an interval self contained, but when setting up the calculator it seems redundant.
+- the algorithm actually runs through all intervals even though it would be possible to determine earlier whether we should stop.
+- i guess you could add some interfaces to make the code easier to re-use elsewhere, but right not it would be overkill.
+
+Next up is a Ruby solution.... I am wondering how close you could get to a one-liner :-D
+
+
