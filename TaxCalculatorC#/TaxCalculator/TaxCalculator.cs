@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace TaxCalculator
@@ -12,9 +11,9 @@ namespace TaxCalculator
 			this.taxIntervals = taxIntervals;
 		}
 
-		public double Calculate(double amount)
+		public decimal Calculate(decimal amount)
 		{
-			return Math.Round(taxIntervals.Sum(t => t.Calculate(amount)), 1);
+			return taxIntervals.Sum(t => t.Calculate(amount));
 		}
 	}
 }

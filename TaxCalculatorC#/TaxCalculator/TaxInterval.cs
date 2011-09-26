@@ -2,23 +2,23 @@
 {
 	public class TaxInterval
 	{
-		private readonly double start;
-		private readonly double end;
-		private readonly double rate;
+		private readonly decimal start;
+		private readonly decimal end;
+		private readonly decimal rate;
 
-		public TaxInterval(double start, double end, double rate)
+		public TaxInterval(decimal start, decimal end, decimal rate)
 		{
 			this.start = start;
 			this.end = end;
 			this.rate = rate;
 		}
 
-		public double Calculate(double amount)
+		public decimal Calculate(decimal amount)
 		{
+			var amountWithinThresHold = decimal.Zero;
 			if (amount < start)
-				return 0.0;
-
-			var amountWithinThresHold = 0.0;			
+				return amountWithinThresHold;
+						
 			if (amount < end)			
 				amountWithinThresHold = amount - start;
 			

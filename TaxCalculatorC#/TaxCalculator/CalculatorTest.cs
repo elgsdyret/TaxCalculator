@@ -11,13 +11,6 @@ namespace TaxCalculator
 		[SetUp]
 		public void LoadCalculator()
 		{
-			//						Tax Rate
-			//Up to 5,070			10%
-			//5,071 up to 8,660		14%
-			//8,661 up to 14,070	23%
-			//14,071 up to 21,240	30%
-			//21,241 up to 40,230	33%
-			//Higher than 40,230	45%
 			calculator = new TaxCalculator(new List<TaxInterval>
 			                               	{
 			                               		new TaxInterval(0, 5070, 10),
@@ -25,7 +18,7 @@ namespace TaxCalculator
 			                               		new TaxInterval(8660, 14070, 23),
 			                               		new TaxInterval(14070, 21240, 30),
 			                               		new TaxInterval(21240, 40230, 33),
-			                               		new TaxInterval(40230, double.PositiveInfinity, 45)
+			                               		new TaxInterval(40230, decimal.MaxValue, 45)
 			                               	});
 		}
 
