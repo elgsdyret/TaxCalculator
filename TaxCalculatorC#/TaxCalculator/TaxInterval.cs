@@ -19,7 +19,7 @@
 			if (amount < start)
 				return amountWithinThresHold;
 						
-			if (amount < end)			
+			if (amount <= end)			
 				amountWithinThresHold = amount - start;
 			
 			if (amount > end)			

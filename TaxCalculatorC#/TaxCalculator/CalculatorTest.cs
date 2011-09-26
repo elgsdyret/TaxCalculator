@@ -56,5 +56,26 @@ namespace TaxCalculator
 			var amount = calculator.Calculate(50000);
 			Assert.That(amount, Is.EqualTo(15068.1));
 		}
+
+		[Test]
+		public void ExactlyOnThresHold()
+		{
+			var amount = calculator.Calculate(5070);
+			Assert.That(amount, Is.EqualTo(507));
+		}
+
+		[Test]
+		public void ExactlyOnThresHoldPlus1()
+		{
+			var amount = calculator.Calculate(5071);
+			Assert.That(amount, Is.EqualTo(507.14));
+		}
+
+		[Test]
+		public void ExactlyOnThresHoldMinus1()
+		{
+			var amount = calculator.Calculate(5069);
+			Assert.That(amount, Is.EqualTo(506.9));
+		}
 	}
 }
