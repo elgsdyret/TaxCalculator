@@ -6,6 +6,7 @@ I kinda like the C# solution, besides:
 - the algorithm actually runs through all intervals even though it would be possible to determine earlier whether we should stop.
 - i guess you could add some interfaces to make the code easier to re-use elsewhere, but right now it would be overkill.
 
-Next up is a Ruby solution.... I am wondering how close you could get to a one-liner :-D
-
+Ruby solution:
+- very primitive
+- end up being very similar to C# version
 
